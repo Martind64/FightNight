@@ -9,13 +9,16 @@ namespace FightNight
      public interface IFighter
      {
          string UpperCut { get; }
-
          string Jab { get; }
          string SpecialMove { get; }
          string RightHook { get; }
          string LeftHook { get; }
          string SuckerPunch { get; }
+         string RightCross { get; }
+         string LeftCross { get; }
 
+     
+     
          
 
 
