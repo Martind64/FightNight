@@ -6,21 +6,18 @@ using System.Threading.Tasks;
 
 namespace FightNight
 {
-     public interface IFighter
-     {
-         string UpperCut { get; }
-         string Jab { get; }
-         string SpecialMove { get; }
-         string RightHook { get; }
-         string LeftHook { get; }
-         string SuckerPunch { get; }
-         string RightCross { get; }
-         string LeftCross { get; }
-
-     
-     
-         
+    public interface IFighter
+    {
+        string _move { get; }
+        void UpperCut();
+        void Jab();
+        void SpecialMove();
+        void RightHook();
+        void LeftHook();
+        void SuckerPunch();
+        void RightCross();
+        void LeftCross();
 
 
-     }
+    }
 }
