@@ -9,13 +9,7 @@ namespace FightNight
     public class Fighter : IFighter
     {
 
-
-        public Fighter(string move)
-        {
-            _move = move;
-        }
-
-        public string _move { get; private set; }
+       
 
         public string Move
         {
@@ -24,11 +18,13 @@ namespace FightNight
         }
 
 
-        
+
+        public string _move { get; private set; }
+        public string Health { get; private set; }
 
         public void UpperCut()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("You Uppercutted the bastard");
         }
 
         public void Jab()

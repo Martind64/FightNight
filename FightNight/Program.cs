@@ -10,7 +10,7 @@ namespace FightNight
     {
         static void Main(string[] args)
         {
-
+            
         }
     }
 }

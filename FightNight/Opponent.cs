@@ -9,6 +9,7 @@ namespace FightNight
     public class Opponent : IFighter
     {
         public string _move { get; set; }
+        public string Health { get; private set; }
 
         public Opponent(string move)
         {

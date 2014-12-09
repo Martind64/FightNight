@@ -9,6 +9,7 @@ namespace FightNight
     public interface IFighter
     {
         string _move { get; }
+        string Health { get; }
         void UpperCut();
         void Jab();
         void SpecialMove();
