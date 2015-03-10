@@ -10,6 +10,10 @@ namespace FightNight
     {
         static void Main(string[] args)
         {
+            Fighter fighter = new Fighter();
+            StartMenu start = new StartMenu();
+
+            start.StartGame();
             
         }
     }

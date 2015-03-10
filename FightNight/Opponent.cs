@@ -6,60 +6,58 @@ using System.Threading.Tasks;
 
 namespace FightNight
 {
-    public class Opponent : IFighter
+    public class Opponent
     {
-        public string _move { get; set; }
-        public string Health { get; private set; }
+        public string _name;
+        public int _health = 100;
+        private string _move;
 
-        public Opponent(string move)
+        public Opponent()
         {
-            _move = move;
-        }
-        public string Move
-        {
-            get { return _move; }
-            set { _move = value; }
         }
 
-
-        public void UpperCut()
+        public void AttackMove()
         {
-            throw new NotImplementedException();
-        }
+            Fighter _fighter = new Fighter();
+            while (_health > 0)
+            {
+                Console.WriteLine("\nMake a move");
+                _move = Convert.ToString(Console.ReadLine());
+                Random Random = new Random();
+                Random Crit = new Random();
+                int _crit = Crit.Next(5, 16);
+                int _random = Random.Next(0, 10);
 
-        public void Jab()
-        {
-            throw new NotImplementedException();
-        }
+                if (_move == "jab" || _move == "uppercut" || _move == "right hook" || _move == "left hook")
+                {
+                    if (_crit == 15)
+                    {
+                        Console.WriteLine("You CRIT! for {0}!", _crit);
+                        _fighter._health -= _crit;
+                        Console.WriteLine("{0} has {1} left", _fighter._name, _health);
+                    }
+                    else
+                    {
+                        Console.WriteLine("You hit for {0}!", _random);
+                        _fighter._health -= _random;
+                        Console.WriteLine("{0} has {1}} left", _fighter._name, _health);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("\nYou have to make a move");
+                }
+                if (_health <= 0)
+                {
+                    Console.WriteLine("You won!");
+                }
+            }
 
-        public void SpecialMove()
-        {
-            throw new NotImplementedException();
-        }
 
-        public void RightHook()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void LeftHook()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SuckerPunch()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RightCross()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void LeftCross()
-        {
-            throw new NotImplementedException();
         }
     }
+
+
+
+
 }
